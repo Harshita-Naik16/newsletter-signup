@@ -5,7 +5,7 @@ const https = require('https');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.static("public"))
+app.use('/public', express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
 app.get("/", (req, res) => {
