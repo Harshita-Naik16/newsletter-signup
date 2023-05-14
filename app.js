@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use('/public', express.static(path.join(__dirname, "public")));
+app.use(express.static('public'))
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -31,7 +31,7 @@ app.post("/", (req, res) => {
    const addDataJson = JSON.stringify(addData);
    const options = {
       method: 'POST',
-      auth: "hershey:f28e0f9cf201583607ed77ba6dde707a-us21"
+      auth: "hershey:2694de2c6f3cdf8e6b91c7626317ae82-us21"
    }
    const url = 'https://us21.api.mailchimp.com/3.0//lists/e6ff1cbbdc'
 
