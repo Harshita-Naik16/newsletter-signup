@@ -57,30 +57,5 @@ app.post('/failure', (req, res) => {
    res.redirect('/');
 })
 
-app.listen(3000, () => console.log("server listening on port 3000"))
+app.listen(process.env.PORT || 3000, () => console.log("server listening on port 3000"))
 
-// API Key
-// f28e0f9cf201583607ed77ba6dde707a-us21
-
-
-// LIST_ID
-// e6ff1cbbdc
-
-// endpoint
-// 'https://us21.api.mailchimp.com/3.0//lists/e6ff1cbbdc'
-
-
-
-
-
-// mailchimp.setConfig({
-//     apiKey: 'f28e0f9cf201583607ed77ba6dde707a-us21',
-//     server: 'https://us21.admin.mailchimp.com/',
-// });
-
-// async function callPing() {
-//     const response = await mailchimp.ping.get();
-//     console.log(response);
-// }
-
-// callPing();
